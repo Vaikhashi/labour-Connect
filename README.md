@@ -1,31 +1,29 @@
-# 🛠 Labour Connect
+# Labour Connect
 
-**Labour Connect** is a platform to bridge the gap between local workers and employers by enabling job postings, applications, and real-time communication.
+A job board for local work. Employers post jobs, workers in the area apply, and once the employer accepts someone they can chat and leave a review when the job's done.
 
----
+Built with Node.js, Express and EJS, with MongoDB for data and Firebase for the chat.
 
-## 🧰 Features
-- Three user types: Workers, Employers, Admin
-- Job posting, application, and status tracking
-- Real-time chat integration using Firebase
-- Secure login & user-friendly interface
+## What's in it
 
----
+- Sign up as a worker or an employer (passwords hashed with bcrypt, sessions with express-session).
+- Employers post jobs, see who applied, and accept the people they want.
+- Workers browse jobs, apply, and track pending and accepted applications.
+- One-to-one chat between employer and worker (Firebase).
+- Reviews after a job is finished.
 
-## 🔧 Tech Stack
-- **Frontend**: HTML, CSS, JS 
-- **Backend**: Node.js 
-- **Database**: MongoDB / Firebase
-- **APIs**: Firebase for chat, WordPress for payments
+## Running it
 
----
+You need Node.js and MongoDB running locally.
 
-## 🚀 Status
-Working prototype built — preparing for hosting and user testing.
+```bash
+npm install
+node index.js
+```
 
----
+Open http://localhost:3000. The app connects to `mongodb://127.0.0.1:27017/LabConnect`.
 
-## 👩‍💻 Developer
-**Vaikhashi A**  
-B.Tech CSE | Tech for Social Impact | Python & Web Dev  
-[LinkedIn](https://linkedin.com/in/vaikhashi-a-7ab540237)
+## Next steps
+
+- Move the database URL and Firebase config into a `.env` file.
+- Host it so people can try it without setting it up.
